@@ -1,7 +1,7 @@
 use leptos::{ev::MouseEvent, logging::{error, log}, prelude::*, server_fn::{codec::JsonEncoding, BoxedStream, Websocket}, task::spawn_local};
 use leptos_meta::*;
 use leptos_router::{components::{Route, Router, Routes}, *};
-use futures::{channel::mpsc::{self, Receiver, Sender}, future::{select, Either}, SinkExt, StreamExt};
+use futures::{channel::mpsc::{self, Sender}, future::{select, Either}, SinkExt, StreamExt};
 use futures::channel::oneshot;
 
 #[server(protocol = Websocket<JsonEncoding, JsonEncoding>)]
